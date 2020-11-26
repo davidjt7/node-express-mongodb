@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "e7d52cc7-96e3-42dd-bae6-6b889145f22d",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Derek\",\r\n    \"email\": \"drp@gmail.com\",\r\n    \"password\": \"abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/api/users",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"drp@gmail.com\",\r\n    \"password\": \"abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/api/users/login",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGVyZWsiLCJlbWFpbCI6ImRycEBnbWFpbC5jb20iLCJpYXQiOjE2MDYzOTExMDUsImV4cCI6MTYwNjM5MTIyNX0.nNCAIlEBH8Ux5F1oxHt5U2LO5V_sAQNq9IdLNF1r09g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base}}/api/users",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGVyZWsiLCJlbWFpbCI6ImRycEBnbWFpbC5jb20iLCJpYXQiOjE2MDYzOTExMDUsImV4cCI6MTYwNjM5MTIyNX0.nNCAIlEBH8Ux5F1oxHt5U2LO5V_sAQNq9IdLNF1r09g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base}}/api/users/logs",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"logs"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
